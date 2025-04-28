@@ -1,0 +1,18 @@
+PROJECT(UPF_NCU_MODEL)
+
+SET(NCU_DOMAIN_MODEL_PATH   ${NCU_DOMAIN_PATH}/model)
+
+SET(NCU_DOMAIN_ENCODE_PATH ${NCU_DOMAIN_MODEL_PATH}/encode)
+SET(NCU_DOMAIN_REASM_PATH ${NCU_DOMAIN_MODEL_PATH}/reasm)
+#encode
+INCLUDE_DIRECTORIES(${NCU_DOMAIN_ENCODE_PATH}/include)
+#reasm
+INCLUDE_DIRECTORIES(${NCU_DOMAIN_REASM_PATH}/include)
+
+INCLUDE_DIRECTORIES(${NCU_DOMAIN_PATH}/common/sccuclient/include)
+
+
+AUX_SOURCE_DIRECTORY(${NCU_DOMAIN_ENCODE_PATH}/source         ncudomain_model_files)
+AUX_SOURCE_DIRECTORY(${NCU_DOMAIN_REASM_PATH}/source          ncudomain_model_files)
+
+SET (ncudomain_files "${ncudomain_files};${ncudomain_model_files}" PARENT_SCOPE)

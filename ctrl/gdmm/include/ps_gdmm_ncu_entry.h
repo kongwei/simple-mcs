@@ -1,0 +1,6 @@
+#ifndef PS_SM_GDMM_NCU_ENTRY_H_4c690c02_c805_480a_9e02_6386e329aca8
+#define PS_SM_GDMM_NCU_ENTRY_H_4c690c02_c805_480a_9e02_6386e329aca8
+
+VOID psUpfGdmmEntry(WORD16 wState, WORD32 dwMsgId, VOID *pMsgBody, VOID *pPData, BOOLEAN bSame);
+
+#endif
